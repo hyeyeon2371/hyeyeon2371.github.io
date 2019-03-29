@@ -1,0 +1,761 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+
+  align-items: center;
+  background: #f5f5f5;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Nanum Gothic', sans-serif;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.container {
+
+  background: #f5f5f5;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.container .wrapper {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  min-width: 248px;
+  background: #f9f9f9;
+}
+
+.sidebar .profile {
+  padding: 36px 24px;
+  text-align: center;
+
+  background: #2E3F4E;
+  color: white;
+}
+
+.sidebar .content {
+  background: #f9f9f9;
+
+}
+
+.sidebar .profile .profile-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.sidebar .profile .profile-name {
+  margin: 14px 0 4px 0;
+  font-size: 22px;
+}
+
+.sidebar .profile .profile-job {
+  margin: 0;
+}
+
+.sidebar .contact,
+.sidebar .education,
+.sidebar .certification,
+.sidebar .award{
+  padding: 30px 30px 8px 30px;
+}
+
+.sidebar .contact img {
+  width: 16px;
+  height: 16px;
+}
+
+.sidebar .contact .contact-content {
+
+}
+
+.sidebar .contact .contact-content a {
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+
+.sidebar .contact .contact-content a:hover {
+  color: #2E3F4E;
+  font-weight: 700;
+}
+
+.sidebar .contact-content .email {
+  margin-bottom: 4px;
+  align-items: center;
+  display: flex;
+}
+
+.sidebar .contact-content .linkedin {
+  align-items: center;
+  display: flex;
+}
+
+.sidebar .contact-content .email .image,
+.sidebar .contact-content .linkedin .image {
+  margin-right: 12px;
+}
+
+.sidebar .contact .contact-title,
+.sidebar .education .education-title,
+.sidebar .certification .certification-title,
+.sidebar .award .award-title
+{
+  margin: 0 0 6px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #2E3F4E;
+}
+
+.sidebar .certification .certification-content,
+.sidebar .education .education-content,
+.sidebar .award .award-content{
+  line-height: 1.6;
+}
+
+.sidebar .education .education-content .title,
+.sidebar .award .award-content .title,
+.sidebar .certification .certification-content .title {
+  font-size: 13px;
+  margin: 0;
+}
+
+.sidebar .education .education-content .content,
+.sidebar .award .award-content .content ,
+.sidebar .certification .certification-content .content {
+  font-size: 13px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.sidebar .education .education-content .date,
+.sidebar .certification .certification-content .date,
+.sidebar .award .award-content .date
+{
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Main */
+.main {
+  float: left;
+  height: 100%;
+  border: 1px solid #f7f7f7;
+  background: #ffffff;
+}
+
+.main h2 {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #2E3F4E;
+}
+
+.main .section-intro,
+.main .section-experience,
+.main .section-skill {
+  padding: 40px 40px 0 40px;
+
+}
+
+.main .section-project {
+  padding: 40px;
+}
+
+.main .section-intro {
+
+}
+
+.main .section-intro .intro-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.main .section-intro .intro-title .image,
+.main .section-project .project-title .image,
+.main .section-experience .experience-title .image,
+.main .section-skill .skill-title .image {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 14px;
+}
+
+.main .section-intro .intro-title .title {
+
+}
+
+.main .section-intro .intro-content {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.main .section-experience {
+
+}
+
+.main .section-experience .experience-content section div {
+  display: inline-block;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.main .section-experience .experience-content .title {
+  margin: 0;
+}
+
+.main .section-experience .experience-content .date {
+
+}
+
+.main .section-experience .experience-content .company {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.main .section-experience .experience-content .work,
+.main .section-experience .experience-content .date {
+  font-size: 13px;
+  margin: 0;
+}
+
+.main .section-project {
+
+}
+
+.main .section-project .project-title {
+
+}
+
+.main .section-project .project-content {
+
+}
+
+.main .section-project .project-content .item {
+  display: inline-block;
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.swiper .swiper-close .close-button:hover,
+.main .section-project .project-content .item img:hover{
+  cursor: pointer;
+}
+
+.main .section-project .project-content .title {
+
+  width: 100%;
+  display: inline-block;
+}
+
+.main .section-project .project-content h4 {
+  margin: 0;
+}
+
+.main .section-project .project-content span {
+  font-size: 13px;
+}
+
+.main .section-project .project-content section p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.main .section-project .project-content .skill ul {
+  margin: 0;
+}
+
+.main .section-project .project-content .skill li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.main .section-project .project-content .skill h5 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.main .section-project .project-content .skill .skill-server {
+  float: left;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.main .section-project .project-content .skill .skill-android {
+  float: left;
+  width: 100%;
+}
+
+.main .section-project .project-content .skill .skill-web {
+  float: left;
+  width: 100%;
+
+}
+
+.main .section-skill {
+
+}
+
+.main .section-skill .skill-title {
+
+}
+
+.main .section-skill .skill-content {
+  display: inline-block;
+  width: 100%;
+}
+
+.main .section-skill .skill-content h4 {
+  margin-bottom: 10px;
+}
+
+.main .section-skill .skill-content div {
+
+}
+
+.main .section-skill .skill-content ul {
+  margin: 0;
+}
+
+.main .section-skill .skill-content li {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+.container .swiper {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  position: fixed;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+}
+
+.container .swiper .swiper-slide {
+  /*width: 220px !important;*/
+  padding:0;
+
+}
+
+.container .swiper .swiper-slide img {
+  width: 220px !important;
+}
+
+.swiper-close {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.swiper-close img {
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 10px;
+}
+
+.swiper-pagination {
+  display: flex;
+  margin-top: 20px;
+}
+
+.swiper-pagination .pagination{
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Custom */
+@media (min-width: 768px) {
+  .container {
+
+  }
+
+  .wrapper {
+    display: flex;
+    position: relative;
+  }
+
+  .sidebar {
+
+  }
+
+  .profile {
+
+  }
+
+  .profile-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+
+  .main .section-skill .skill-content div {
+    float: left;
+    width: 50%;
+  }
+
+  .main .section-project .project-content h4 {
+    float: left;
+  }
+
+  .main .section-project .project-content span {
+    float: right;
+  }
+
+  .main .section-experience .experience-content .date {
+    float: right;
+  }
+
+  .main .section-experience .experience-content .title {
+    float: left;
+  }
+
+  .main .section-project .project-content .skill .skill-android,
+  .main .section-project .project-content .skill .skill-web,
+  .main .section-project .project-content .skill .skill-server {
+    margin-bottom: 0;
+    width: 50%;
+  }
+
+
+  .container .swiper .swiper-slide {
+    width: 320px !important;
+    padding:40px;
+  }
+
+
+  .container .swiper .swiper-slide img {
+    width: 320px !important;
+  }
+
+  .swiper-pagination{
+    margin-top: 6px;}
+
+  .profile-name {
+
+  }
+
+  .profile-job {
+
+  }
+
+  .contact {
+
+  }
+
+  .contact-email {
+
+  }
+
+  .contact-linkedin {
+
+  }
+
+  .education {
+
+  }
+
+  .education-title {
+
+  }
+
+  .education-content {
+
+  }
+
+  .certification {
+
+  }
+
+  .certification-title {
+
+  }
+
+  .certification-content {
+
+  }
+}
