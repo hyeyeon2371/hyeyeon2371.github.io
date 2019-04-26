@@ -191,6 +191,7 @@ textarea {
 .sidebar .contact-content .github{
   margin-top: 5px;
 }
+
 .sidebar .contact-content .email ,
 .sidebar .contact-content .github{
   margin-bottom: 4px;
@@ -211,7 +212,9 @@ textarea {
   margin-right: 12px;
 }
 
-
+.sidebar .contact-content .github .image{
+  margin-right: 12px;
+}
 .sidebar .contact .contact-title,
 .sidebar .education .education-title,
 .sidebar .certification .certification-title,
