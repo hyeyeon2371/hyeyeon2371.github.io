@@ -188,7 +188,11 @@ textarea {
   font-weight: 700;
 }
 
-.sidebar .contact-content .email {
+.sidebar .contact-content .github{
+  margin-top: 5px;
+}
+.sidebar .contact-content .email ,
+.sidebar .contact-content .github{
   margin-bottom: 4px;
   align-items: center;
   display: flex;
@@ -199,10 +203,14 @@ textarea {
   display: flex;
 }
 
+
 .sidebar .contact-content .email .image,
-.sidebar .contact-content .linkedin .image {
+.sidebar .contact-content .linkedin .image,
+.sidebar .contact-content .github .image
+{
   margin-right: 12px;
 }
+
 
 .sidebar .contact .contact-title,
 .sidebar .education .education-title,
