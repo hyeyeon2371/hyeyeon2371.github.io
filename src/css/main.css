@@ -164,7 +164,8 @@ textarea {
 .sidebar .contact,
 .sidebar .education,
 .sidebar .certification,
-.sidebar .award{
+.sidebar .award,
+.sidebar .external{
   padding: 30px 30px 8px 30px;
 }
 
@@ -218,7 +219,8 @@ textarea {
 .sidebar .contact .contact-title,
 .sidebar .education .education-title,
 .sidebar .certification .certification-title,
-.sidebar .award .award-title
+.sidebar .award .award-title,
+.sidebar .external .external-title
 {
   margin: 0 0 6px 0;
   font-family: 'Roboto', sans-serif;
@@ -233,14 +235,17 @@ textarea {
 
 .sidebar .education .education-content .title,
 .sidebar .award .award-content .title,
-.sidebar .certification .certification-content .title {
+.sidebar .certification .certification-content .title,
+.sidebar .external .external-content .title
+{
   font-size: 13px;
   margin: 0;
 }
 
 .sidebar .education .education-content .content,
 .sidebar .award .award-content .content ,
-.sidebar .certification .certification-content .content {
+.sidebar .certification .certification-content .content,
+.sidebar .external .external-content .content {
   font-size: 13px;
   margin: 0;
   font-weight: 300;
@@ -248,7 +253,8 @@ textarea {
 
 .sidebar .education .education-content .date,
 .sidebar .certification .certification-content .date,
-.sidebar .award .award-content .date
+.sidebar .award .award-content .date,
+.sidebar .external .external-content .date 
 {
   font-size: 12px;
   margin: 0;
@@ -709,7 +715,7 @@ textarea {
   .main .section-project .project-content .skill .skill-web,
   .main .section-project .project-content .skill .skill-server {
     margin-bottom: 0;
-    width: 50%;
+    /* width: 50%; */
   }
 
 
